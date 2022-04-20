@@ -144,6 +144,7 @@ function confirmSpecialCharacters() {
   return specialCharacters;
 };
 
+// Run series of functions if all were false the first time around
 function characterValidationSeries() {
   var uppercase = confirmUppercase();
   var lowercase = confirmLowercase();
