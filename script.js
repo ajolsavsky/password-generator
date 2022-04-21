@@ -152,5 +152,5 @@ function characterValidationSeries() {
   var specialCharacters = confirmSpecialCharacters();
 
   return uppercase, lowercase, numeric, specialCharacters;
-}
+};
 
