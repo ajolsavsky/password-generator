@@ -43,37 +43,41 @@ function generatePassword() {
     generatePassword();
   }
 
-// Uppercase validation
-var uppercase = confirmUppercase();
+  // Uppercase validation
+  var uppercase = confirmUppercase();
 
-// Lowercase validation
-var lowercase = confirmLowercase();
+  // Lowercase validation
+  var lowercase = confirmLowercase();
 
-// Numeric validation
-var numeric = confirmNumeric();
+  // Numeric validation
+  var numeric = confirmNumeric();
 
-// Special characters
-var specialCharacters = confirmSpecialCharacters();
+  // Special characters
+  var specialCharacters = confirmSpecialCharacters();
 
-// Create alert if all four cases were negative, return to top of function
-if(uppercase === false && lowercase === false && numeric === false && specialCharacters === false){
-  alert('Error: No characters were selected. Please click "OK" for at least 1 of the following: Uppercase, Lowercase, Numeric, Special Characters')
-  characterValidationSeries();
-}
+  // Create alert if all four cases were negative, return to top of function
+  if(uppercase === false && lowercase === false && numeric === false && specialCharacters === false){
+    alert('Error: No characters were selected. Please click "OK" for at least 1 of the following: Uppercase, Lowercase, Numeric, Special Characters')
+    characterValidationSeries();
+  }
 
-// Convert existing array into single string of characters with no spaces
-var characterArrayText = characterArray.join("");
+  // Convert existing array into single string of characters with no spaces
+  var characterArrayText = characterArray.join("");
 
-//Function to call to make an id at random from the string (converted from array)
+  // Make an id at random from the string (converted from array)
   var result = '';
   var characters = characterArrayText;
   var charactersLength = characters.length;
   for (var i=0; i < userCharLength; i++) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
+
+  // Log final password value
   return result;
 };
 
+
+// Character functions:
 // Uppercase function
 function confirmUppercase() {
   var uppercase = window.confirm("Should we include uppercase letters?")
@@ -144,7 +148,7 @@ function confirmSpecialCharacters() {
   return specialCharacters;
 };
 
-// Run series of functions if all were false the first time around
+// Run series of functions again if all were false the first time around
 function characterValidationSeries() {
   var uppercase = confirmUppercase();
   var lowercase = confirmLowercase();

@@ -45,7 +45,7 @@ THEN the password is either displayed in an alert or written to the page
 
 Here is an example of the final page.
 
-![screenshot of finished page](./assets/images/portfolioscreenshot.png)
+![screenshot of finished page](./Assets/screenshot.png)
 
 ## Credits
 
